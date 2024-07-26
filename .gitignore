@@ -1,0 +1,16 @@
+# Ignorar el directorio del entorno virtual
+venv/
+driver/
+
+# Ignorar otros archivos temporales y de configuración
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+.env
+.DS_Store
+.idea/
+.vscode/
+*.log
