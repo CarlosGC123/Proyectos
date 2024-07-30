@@ -1,25 +1,28 @@
-# main.py
-
+import time
 from Parabank import ParabankFlujo
 from GeneradorCuenta import DatoAleatorio
 
 
 def main():
-    automator = ParabankFlujo()
-    account_info = DatoAleatorio.generate_account()
+    try:
+        automator = ParabankFlujo()
+        account_info = DatoAleatorio.generate_account()
+        automator.Registro_Cuenta(account_info)
 
-    automator.register_account()
-    if automator.validate_registration():
-        print("Account registration successful.")
-        automator.login()
-        if automator.validate_login():
-            print("Login successful.")
+        if automator.validate_registration():
+            automator.cerrar_sesion()
+            automator.login(account_info)
+
+            if automator.validate_login():
+                time.sleep(2)
+                print("Login completado")
+            else:
+                print("Login fallido")
         else:
-            print("Login failed.")
-    else:
-        print("Registration failed.")
+            print("El registro falló.")
 
-    automator.close()
+    except Exception as e:
+        print(f"Ocurrió un error: {e}")
 
 
 if __name__ == "__main__":

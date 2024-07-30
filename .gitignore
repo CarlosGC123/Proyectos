@@ -1,6 +1,6 @@
 # Ignorar el directorio del entorno virtual
-venv/
-driver/
+#venv/
+#driver/chrome
 
 # Ignorar otros archivos temporales y de configuración
 __pycache__/
@@ -14,3 +14,6 @@ __pycache__/
 .idea/
 .vscode/
 *.log
+*.tmp
+Thumbs.db
+
