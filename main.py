@@ -6,14 +6,14 @@ from GeneradorCuenta import DatoAleatorio
 def main():
     try:
         automator = ParabankFlujo()
-        account_info = DatoAleatorio.generate_account()
+        account_info = DatoAleatorio.GeneradorCuenta()
         automator.Registro_Cuenta(account_info)
 
-        if automator.validate_registration():
+        if automator.valida_registro():
             automator.cerrar_sesion()
             automator.login(account_info)
 
-            if automator.validate_login():
+            if automator.valida_login():
                 time.sleep(2)
                 print("Login completado")
             else:
@@ -27,3 +27,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

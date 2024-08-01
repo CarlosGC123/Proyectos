@@ -1,5 +1,5 @@
 # Ignorar el directorio del entorno virtual
-#venv/
+venv/
 #driver/chrome
 
 # Ignorar otros archivos temporales y de configuración
