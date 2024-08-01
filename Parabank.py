@@ -11,17 +11,17 @@ class ParabankFlujo:
     def __init__(self):
         driver_chrome = Service(executable_path=path_chromedriver)
         self.driver = webdriver.Chrome(service=driver_chrome)
-        self.home_page = InicioPage(self.driver)
+        self.inicio_page = InicioPage(self.driver)
         self.login_page = LoginPage(self.driver)
-        self.registration_page = RegistroPage(self.driver)
+        self.registro_page = RegistroPage(self.driver)
         self.logger = logging.getLogger(__name__)
         logging.basicConfig(level=logging.INFO)
 
     def Registro_Cuenta(self, Cuenta_Info):
         try:
             self.driver.get(link_parabank)
-            self.home_page.ir_a_registro()
-            self.registration_page.registrar_cuenta(Cuenta_Info)
+            self.inicio_page.presionar_registro()
+            self.registro_page.registrar_cuenta(Cuenta_Info)
         except Exception as e:
             self.logger.error(f"Se produjo un error durante el registro : {e}")
 
@@ -33,13 +33,13 @@ class ParabankFlujo:
 
     def cerrar_sesion(self):
         try:
-            self.home_page.cerrar_sesion()
+            self.inicio_page.cerrar_sesion()
         except Exception as e:
             self.logger.error(f"Se produjo un error al cerrar sesión : {e}")
 
     def valida_registro(self):
         try:
-            return self.registration_page.valida_registro()
+            return self.registro_page.valida_registro()
         except Exception as e:
             self.logger.error(f"Error durante la validación del registro: {e}")
             return False

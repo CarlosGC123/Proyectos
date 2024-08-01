@@ -5,17 +5,28 @@ from GeneradorCuenta import DatoAleatorio
 
 def main():
     try:
-        automator = ParabankFlujo()
-        account_info = DatoAleatorio.GeneradorCuenta()
-        automator.Registro_Cuenta(account_info)
+        #Instanciando el flujo en una variable para interactuar con las clases
+        Flujo = ParabankFlujo()
+        #Generamos información aleatoria y la encapsulamos
+        Info_Cuenta = DatoAleatorio.GeneradorCuenta()
+        #Mostrando la cuenta generada para registrar
+        print("Datos de la cuenta generada para su registro:")
+        print(Info_Cuenta)
+        #Realizamos el registro de la cuenta almacenada
+        Flujo.Registro_Cuenta(Info_Cuenta)
 
-        if automator.valida_registro():
-            automator.cerrar_sesion()
-            automator.login(account_info)
+        #Validación de registro completado
+        if Flujo.valida_registro():
+            #Cerramos sesión
+            Flujo.cerrar_sesion()
+            #Opción para navegar nuevamente en el link
+            Flujo.login(Info_Cuenta)
 
-            if automator.valida_login():
+            #Validación de Login completado
+            if Flujo.valida_login():
                 time.sleep(2)
                 print("Login completado")
+                input("Presiona Enter para cerrar el navegador...")
             else:
                 print("Login fallido")
         else:

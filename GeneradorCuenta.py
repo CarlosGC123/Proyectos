@@ -2,6 +2,8 @@ import random
 import string
 from DatosCuenta import InfoCuenta
 
+#Clase que genera información aleatoria para instanciar en la clase InfoCuenta
+
 
 class DatoAleatorio:
     @staticmethod

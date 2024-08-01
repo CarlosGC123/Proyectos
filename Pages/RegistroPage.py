@@ -1,5 +1,7 @@
-from BasePage import BasePage
+from .BasePage import BasePage
 from selenium.webdriver.common.by import By
+
+#Clase que contiene los métodos de registro de una cuenta
 
 
 class RegistroPage(BasePage):

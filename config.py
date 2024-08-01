@@ -1,3 +1,4 @@
+#Archivo para las configuraciones de entorno
 import os
 
 # Ruta relativa al directorio donde está el script

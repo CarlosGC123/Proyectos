@@ -1,5 +1,7 @@
-from BasePage import BasePage
+from .BasePage import BasePage
 from selenium.webdriver.common.by import By
+
+#Clase que contiene los métodos interactivos de Login
 
 
 class LoginPage(BasePage):
