@@ -2,8 +2,8 @@
 
 ## Requisitos
 
-1. **Python**: Asegurarse de tener Python 3.12 instalado.
-2. **Entorno Virtual**: Crear un entorno virtual y activarlo:
+1. **Python**: Asegurarse de tener el intérprete Python 3.12 y Pycharm instalado. Se asume que debe de tener la configuración por defecto.
+2. **Entorno Virtual**: Crear un entorno virtual en la terminal y activarlo:
 
     ```bash
     python -m venv venv
