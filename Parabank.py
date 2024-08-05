@@ -1,9 +1,6 @@
 import logging
 from selenium import webdriver
-from selenium.common import TimeoutException
 from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.support.wait import WebDriverWait
-
 from config import path_chromedriver, link_parabank
 from Pages.InicioPage import InicioPage
 from Pages.LoginPage import LoginPage
