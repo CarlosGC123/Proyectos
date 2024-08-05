@@ -6,6 +6,9 @@ from DatosCuenta import InfoCuenta
 
 
 class DatoAleatorio:
+    def __init__(self):
+        pass
+
     @staticmethod
     def GeneradorCuenta():
         return InfoCuenta(
