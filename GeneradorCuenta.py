@@ -8,7 +8,6 @@ from DatosCuenta import InfoCuenta
 class DatoAleatorio:
     @staticmethod
     def GeneradorCuenta():
-        # Lógica para generar información aleatoria
         return InfoCuenta(
             first_name=''.join(random.choices(string.ascii_letters, k=6)),
             last_name=''.join(random.choices(string.ascii_letters, k=6)),

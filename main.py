@@ -12,6 +12,8 @@ def main():
         #Mostrando la cuenta generada para registrar
         print("Datos de la cuenta generada para su registro:")
         print(Info_Cuenta)
+        #Abrimos la página
+        Flujo.Abrir_Pagina()
         #Realizamos el registro de la cuenta almacenada
         Flujo.Registro_Cuenta(Info_Cuenta)
 
