@@ -1,4 +1,4 @@
-#Clase para el almacenamiento de información de una cuenta
+# Clase para el almacenamiento de información de una cuenta
 
 class InfoCuenta:
     def __init__(self, first_name, last_name, address, city, state, zip_code, phone, ssn, username, password):

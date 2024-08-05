@@ -17,7 +17,7 @@ class ParabankFlujo:
         self.logger = logging.getLogger(__name__)
         logging.basicConfig(level=logging.INFO)
 
-    def Abrir_Pagina(self):
+    def abrir_pagina(self):
         #Flujo de carga de la página de Parabank
         try:
             self.logger.info(f"Inicializando flujo Parabank...")
@@ -26,7 +26,7 @@ class ParabankFlujo:
         except Exception as e:
             self.logger.error(f"Error con la carga completa de la página : {e}")
 
-    def Registro_Cuenta(self, Cuenta_Info):
+    def registro_cuenta(self, Cuenta_Info):
         #Flujo para Registrar una Cuenta de Parabank
         try:
             self.logger.info(f"Registro de Cuenta generada")
